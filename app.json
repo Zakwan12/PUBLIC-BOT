@@ -1,7 +1,7 @@
 {
   "name": "WhatsApp",
     "logo": "https://f.top4top.io/p_2149d3qg60.jpg",
-    "description": "PUBLIC-BOT,
+    "description": "PUBLIC-BOT",
   "keywords": ["nodejs", "bot", "whatsapp bot"]
     "repository": "https://github.com/KilersBotz/PUBLIC-BOT",
   "buildpacks": [
