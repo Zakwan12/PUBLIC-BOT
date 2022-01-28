@@ -9,8 +9,11 @@
 <img src="https://avatars.githubusercontent.com/KilersBotz" width="240" height="240"/>
 
 ## `Thanks To`
+
 [`KilersBotz`](https://github.com/KilersBotz)
+
 [`HelgaIlham`](https://github.com/HelgaIlham)
+
 [`Baileys`](https://github.com/adiwajshing/Baileys) 
 
 
