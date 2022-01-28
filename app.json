@@ -1,27 +1,7 @@
 {
-  "name": "WhatsApp",
-    "logo": "https://i.ibb.co/WPTjhrF/kaneki-tokyo-ghoul-4k.jpg",
-    "description": "PUBLIC-BOT",
-  "keywords": ["nodejs", "bot", "whatsapp bot"]
-    "repository": "https://github.com/KilersBotz/PUBLIC-BOT",
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick"
-    },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-    }
-  ],
-   "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    }
+  "name": "BOT",
+  "description": "whatsapp bot build with nodejs",
+  "repository": "https://github.com/KilersBotz/PUBLIC-BOT",
+  "logo": "https://i.ibb.co/WPTjhrF/kaneki-tokyo-ghoul-4k.jpg",
+  "keywords": ["nodejs", "bot", "BOT"]
 }
