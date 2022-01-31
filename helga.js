@@ -399,7 +399,7 @@ var ase = new Date();
                 case 15: jamss = "Sore🌇Jangan lupa sholat Ashar kak😇"; break;
                 case 16: jamss = "Selamat sore🌇"; break;
                 case 17: jamss = "Selamat sore🌇"; break;
-                case 18: jamss = "Selamat malam🌙"; break;
+                case 18: jamss = "Selamat sore🌇"; break;
                 case 19: jamss = "Malam 🌙 Jangan lupa sholat Isya kak😇"; break;
                 case 20: jamss = "Selamat malam🌙"; break;
                 case 21: jamss = "Selamat malam🌙"; break;
@@ -1094,7 +1094,7 @@ reply('https://youtube.com/c/HelgaZexs妥')
 			if (isCmd && antiSpam.isFiltered(from) && !isGroup) { console.log(color('[SPAM]', 'red'), color(time, 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname))
 return reply('Tunggu Sebentar!')}  
 if (isCmd && antiSpam.isFiltered(from) && isGroup) { console.log(color('[SPAM]', 'red'), color(time, 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
-return reply('Jangan Spam Bot Woi Nanti Gw Ban Lu ')}
+return reply('Jangan Spam Bangh :( ')}
 if (isCmd && !isOwner) antiSpam.addFilter(from)
 		if (!publik) {
 		if (!isOwner && !mek.key.fromMe) return
@@ -1296,6 +1296,7 @@ _⫹⫺💬Time : ${timeWib} WIB_
 │ • ${prefix}welcome on / off
 │ • ${prefix}linkgc
 │ • ${prefix}add
+│ • ${prefix}tagall infonya
 │ • ${prefix}kick
 │ • ${prefix}creategroup
 │ • ${prefix}sticktag
@@ -1309,6 +1310,7 @@ _⫹⫺💬Time : ${timeWib} WIB_
 
 ╭─「 Searching Menu 」
 │ • ${prefix}ssweb
+│ • ${prefix}pinterest
 ╰────
 
 
@@ -1334,32 +1336,44 @@ _⫹⫺💬Time : ${timeWib} WIB_
 │ • ${prefix}attp
 ╰────
 `
-sendButLocation(from, `${menu}`, `${uwu}Αʅʅ ⱮҼɳυ${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}about`,buttonText:{displayText:'ABOUT🌱'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
+sendButLocation(from, `${menu}`, `${uwu}Αʅʅ ⱮҼɳυ${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}about`,buttonText:{displayText:'ABOUT🌱'},type:1},{buttonId:`${prefix}command`,buttonText:{displayText:'SIMPLE MENU🐳'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
 break
-case 'h':
-g = 'ok'
-fakestatus(g)
-break
-case 'stickermenu':
+case 'downloadmenu':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
         ptod = "6287701656619@s.whatsapp.net"
         stod = `${sender}`
         uwu = '```'
        stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-sticmen = `
-Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih
+       down = `
+╭─「 Download Menu 」
+│ • ${prefix}ytmp4
+│ • ${prefix}ytmp3
+│ • ${prefix}tiktoknowm
+│ • ${prefix}igdl
+╰────
 
+`
+sendButLocation(from, `${down}`, `${uwu}𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐌𝐄𝐍𝐔${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}asupan`,buttonText:{displayText:'ASUPAN🌸'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
+break
+case 'infomationmenu':
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
+        ptod = "6287701656619@s.whatsapp.net"
+        stod = `${sender}`
+        uwu = '```'
+       stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
+				stst = stst.status == 401 ? '' : stst.status
+       info = `
+╭─「 Information Menu 」
+│ • ${prefix}ping
+│ • ${prefix}speed
+│ • ${prefix}runtime
+│ • ${prefix}tes
+│ • ${prefix}bugreport [ query ]
+╰────
 
-╭─「 Sticker Menu 」
-│ • ${prefix}take
-│ • ${prefix}swm
-│ • ${prefix}sticker [ Reply ]
-│ • ${prefix}toimg
-│ • ${prefix}attp
-╰────`
-sendButLocation(from, `${sticmen}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU🌺'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
+`
+sendButLocation(from, `${info}`, `${uwu}𝐈𝐍𝐅𝐎𝐌𝐀𝐓𝐈𝐎𝐍𝐌𝐄𝐍𝐔${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}asupan`,buttonText:{displayText:'ASUPAN🌸'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
 break
 case 'textpromenu':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
@@ -1368,11 +1382,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         uwu = '```'
        stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-pro = `
-Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih
-
-
+       pro = `
 ╭─「 TextPro Menu 」
 │ • ${prefix}ninja teks | teks2
 │ • ${prefix}joker teks | teks2
@@ -1390,8 +1400,77 @@ Silahkan Pilih
 │ • ${prefix}Sircuit teks
 │ • ${prefix}Discovery teks
 │ • ${prefix}Skeleton teks
-╰────`
-sendButLocation(from, `${pro}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU🌺'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
+╰────
+
+`
+sendButLocation(from, `${pro}`, `${uwu}𝐓𝐄𝐗𝐓𝐏𝐑𝐎𝐌𝐄𝐍𝐔${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}asupan`,buttonText:{displayText:'ASUPAN🌸'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
+break
+case 'makermenu':
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
+        ptod = "6287701656619@s.whatsapp.net"
+        stod = `${sender}`
+        uwu = '```'
+       stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
+				stst = stst.status == 401 ? '' : stst.status
+       maker = `
+╭─「 Maker Menu 」
+│ • ${prefix}girlneko teks | teks2
+│ • ${prefix}sadboy teks | teks2
+│ • ${prefix}lolimaker teks
+│ • ${prefix}rem teks
+│ • ${prefix}gura teks
+│ • ${prefix}kaneki teks
+╰───
+
+`
+sendButLocation(from, `${maker}`, `${uwu}𝐌𝐀𝐊𝐄𝐑𝐌𝐄𝐍𝐔${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}asupan`,buttonText:{displayText:'ASUPAN🌸'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
+break
+case 'grubmenu':
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
+        ptod = "6287701656619@s.whatsapp.net"
+        stod = `${sender}`
+        uwu = '```'
+       stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
+				stst = stst.status == 401 ? '' : stst.status
+       grup = `
+╭─「 Group Menu 」
+│ • ${prefix}nsfw
+│ • ${prefix}group open / close
+│ • ${prefix}antilink on / off
+│ • ${prefix}antiwame on / off
+│ • ${prefix}welcome on / off
+│ • ${prefix}linkgc
+│ • ${prefix}add
+│ • ${prefix}tagall infonya
+│ • ${prefix}kick
+│ • ${prefix}creategroup
+│ • ${prefix}sticktag
+│ • ${prefix}promote
+│ • ${prefix}demote
+│ • ${prefix}promoteall
+│ • ${prefix}demoteall
+│ • ${prefix}revoke
+│ • ${prefix}leave
+╰────
+
+`
+sendButLocation(from, `${grup}`, `${uwu}𝐆𝐑𝐔𝐁𝐌𝐄𝐍𝐔${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}asupan`,buttonText:{displayText:'ASUPAN🌸'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
+break
+case 'searchingmenu':
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
+        ptod = "6287701656619@s.whatsapp.net"
+        stod = `${sender}`
+        uwu = '```'
+       stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
+				stst = stst.status == 401 ? '' : stst.status
+       search = `
+╭─「 Searching Menu 」
+│ • ${prefix}ssweb
+│ • ${prefix}pinterest
+╰────
+
+`
+sendButLocation(from, `${search}`, `${uwu}𝐒𝐄𝐀𝐑𝐂𝐇𝐈𝐍𝐆𝐌𝐄𝐍𝐔${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}asupan`,buttonText:{displayText:'ASUPAN🌸'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
 break
 case 'ownermenu':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
@@ -1400,11 +1479,7 @@ if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quo
         uwu = '```'
        stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-own = `
-Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih
-
-
+       owner = `
 ╭─「 Owner Menu 」
 │ • ${prefix}setmenu
 │ • ${prefix}setallmenu
@@ -1416,163 +1491,45 @@ Silahkan Pilih
 │ • ${prefix}setname
 │ • ${prefix}self
 │ • ${prefix}public
-╰────`
-sendButLocation(from, `${own}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU🌺'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
+╰────
+
+`
+sendButLocation(from, `${owner}`, `${uwu}𝐎𝐖𝐍𝐄𝐑𝐌𝐄𝐍𝐔${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}asupan`,buttonText:{displayText:'ASUPAN🌸'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
 break
-case 'grupmenu':
+case 'stickermenu':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
         ptod = "6287701656619@s.whatsapp.net"
         stod = `${sender}`
         uwu = '```'
        stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
-grup = `
-Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih
+       stik = `
+╭─「 Sticker Menu 」
+│ • ${prefix}take
+│ • ${prefix}swm
+│ • ${prefix}sticker [ Reply ]
+│ • ${prefix}toimg
+│ • ${prefix}attp
+╰────
 
-
-╭─「 Group Menu 」
-│ • ${prefix}nsfw
-│ • ${prefix}group open / close
-│ • ${prefix}antilink on / off
-│ • ${prefix}antiwame on / off
-│ • ${prefix}welcome on / off
-│ • ${prefix}linkgc
-│ • ${prefix}add
-│ • ${prefix}kick
-│ • ${prefix}creategroup
-│ • ${prefix}sticktag
-│ • ${prefix}promote
-│ • ${prefix}demote
-│ • ${prefix}promoteall
-│ • ${prefix}demoteall
-│ • ${prefix}revoke
-│ • ${prefix}leave
-╰────`
-sendButLocation(from, `${grup}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU🌺'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
-break
-case 'nsfwmenu':
-if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
-        ptod = "6287701656619@s.whatsapp.net"
-        stod = `${sender}`
-        uwu = '```'
-       stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-ns = `
-Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih
-
-
-╭─「 Nsfw 」
-│ • ${prefix}awoo
-│ • ${prefix}blowjob
-│ • ${prefix}hentai
-│ • ${prefix}megumin
-│ • ${prefix}neko
-│ • ${prefix}trapnime
-│ • ${prefix}loli
-│ • ${prefix}husbu
-│ • ${prefix}milf
-│ • ${prefix}cosplay
-╰────`
-sendButLocation(from, `${ns}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU🌺'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
-break
-case 'cecanmenu':
-if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
-        ptod = "6287701656619@s.whatsapp.net"
-        stod = `${sender}`
-        uwu = '```'
-       stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-cecan = `
-Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih
-
-
-╭─「 Cecan Menu 」
-│ • ${prefix}vietnam
-│ • ${prefix}malaysia
-│ • ${prefix}korea
-│ • ${prefix}indonesia
-│ • ${prefix}japan
-│ • ${prefix}thailand
-│ • ${prefix}china
-╰────`
-sendButLocation(from, `${cecan}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU🌺'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
-break
-case 'makermenu':
-if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
-        ptod = "6287701656619@s.whatsapp.net"
-        stod = `${sender}`
-        uwu = '```'
-       stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-mak = `
-Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih
-
-
-╭─「 Maker Menu 」
-│ • ${prefix}girlneko teks | teks2
-│ • ${prefix}sadboy teks | teks2
-│ • ${prefix}lolimaker teks
-│ • ${prefix}rem teks
-│ • ${prefix}gura teks
-│ • ${prefix}kaneki teks
-╰───`
-sendButLocation(from, `${mak}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU🌺'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
-break
-case 'infomenu':
-if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
-        ptod = "6287701656619@s.whatsapp.net"
-        stod = `${sender}`
-        uwu = '```'
-       stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-infor = `
-Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih
-
-
-╭─「 Information Menu 」
-│ • ${prefix}ping
-│ • ${prefix}speed
-│ • ${prefix}runtime
-│ • ${prefix}tes
-│ • ${prefix}bugreport [ query ]
-╰────`
-sendButLocation(from, `${infor}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU🌺'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
-break
-case 'downloadmenu':
-if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
-        ptod = "6287701656619@s.whatsapp.net"
-        stod = `${sender}`
-        uwu = '```'
-       stst = await helga.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-down = `
-Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih
-
-
-╭─「 Download Menu 」
-│ • ${prefix}ytmp4
-│ • ${prefix}ytmp3
-│ • ${prefix}tiktoknowm
-│ • ${prefix}igdl
-╰────`
-sendButLocation(from, `${down}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALLMENU🌺'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
+`
+sendButLocation(from, `${stik}`, `${uwu}𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐌𝐄𝐍𝐔${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}asupan`,buttonText:{displayText:'ASUPAN🌸'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
 break
 case 'ssweb':
              if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
              if (args.length == 0) return reply(`Example: ${prefix + command} https://nekopoi.care/`)
              reply(mess.wait)
              ini_link = args[0]
-             ini_buffer = await getBuffer(`http://hadi-api.herokuapp.com/api/ssweb?url=${ini_link}?&device=desktop&full=on`)
-             await helga.sendMessage(from, ini_buffer, image, { quoted: mek })
-             break
-case 'men':
-        case 'hel':
+             buff = await getBuffer(`http://hadi-api.herokuapp.com/api/ssweb?url=${ini_link}?&device=desktop&full=off`)
+             buttons = [{buttonId: `!menu`,buttonText:{displayText: `BACK MENU`},type:1}]
+              imageMsg = (await helga.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+              buttonsMessage = {footerText:'KilersBotz', imageMessage: imageMsg,
+              contentText:`Jangan Lupa Sewabotnya juga ya :v`,buttons,headerType:4}
+              prep = await helga.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              helga.relayWAMessage(prep)
+              break
+case 'menu':
+        case 'help':
         if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
         ptod = "6287701656619@s.whatsapp.net"
         stod = `${sender}`
@@ -1587,6 +1544,10 @@ _⫹⫺🧸Nama : ${pushname}_
 _⫹⫺📬Bio User : ${stst}_
 _⫹⫺🧰Nomor : @${stod.split('@')[0]}_
 `
+const d = fs.readFileSync('./audio/ya.webp');
+
+        helga.sendMessage(from, d, sticker, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "Pala Bapak Kau Tu Menu", 'jpegThumbnail': fs.readFileSync('./audio/ya.webp')}}}})
+
 sendButLocation(from, `${menu}`, `${uwu}✞ঔৣ✞☠︎爪乇几ㄩ☠︎✞ঔৣ✞${uwu}`, {jpegThumbnail:ofrply}, [{buttonId:`${prefix}allmenu`,buttonText:{displayText:'MENU🌸'},type:1},{buttonId:`${prefix}owner`,buttonText:{displayText:'AUTHOR🍁'},type:1}], {contextInfo: { mentionedJid: [ptod,dtod,otod,stod]}})
 break
 case 'jadibot':
@@ -1630,176 +1591,9 @@ case 'jadibot':
               case 'santuy':
               case 'rikagusriani':
               reply(mess.wait)
-              var asupan = await getBuffer(`https://api-${NamaBot}.herokuapp.com/api/asupan/${command}?apikey=Free`) 
+              var asupan = await getBuffer(`https://api-kilersbotz.herokuapp.com/api/asupan/${command}?apikey=Free`) 
               helga.sendMessage(from, asupan, video, { quoted: mek, caption: 'NIH' })
               break
-              case 'menu':
-              case 'help':
-              menu = `Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Ketik Command Berikut
-Untuk Menampilkan Menu Bot
-
-
-_⫹⫺🎯Library : Baileys-script_
-_⫹⫺🍰Version : 1.0.0_
-_⫹⫺🍧Language : Javascript_
-_⫹⫺📯Author : Agus_
-_⫹⫺💬Time : ${timeWib} WIB_
-
-
-
-_⫹⫺🐋Status :  ${isOwner ? 'Owner' : 'User'}_
-_⫹⫺🧸Nama : ${pushname}_
-_⫹⫺📬Bio User : ${stst}_
-_⫹⫺🧰Nomor : @${stod.split('@')[0]}_
-
-
-
-
-╭─「 Download Menu 」
-│ • ${prefix}ytmp4
-│ • ${prefix}ytmp3
-│ • ${prefix}tiktoknowm
-│ • ${prefix}igdl
-╰────
-
-
-╭─「 Information Menu 」
-│ • ${prefix}ping
-│ • ${prefix}speed
-│ • ${prefix}runtime
-│ • ${prefix}tes
-│ • ${prefix}bugreport [ query ]
-╰────
-
-
-╭─「 TextPro Menu 」
-│ • ${prefix}ninja teks | teks2
-│ • ${prefix}joker teks | teks2
-│ • ${prefix}neon_devil teks
-│ • ${prefix}wolf_g teks | teks2
-│ • ${prefix}lion teks | teks2
-│ • ${prefix}Pornhub teks | teks2
-│ • ${prefix}Blackpink teks
-│ • ${prefix}Horror teks | teks2
-│ • ${prefix}Sketch teks
-│ • ${prefix}Rainbow teks
-│ • ${prefix}Demon teks
-│ • ${prefix}Halloween teks
-│ • ${prefix}Halloween2 teks | teks2
-│ • ${prefix}Sircuit teks
-│ • ${prefix}Discovery teks
-│ • ${prefix}Skeleton teks
-╰────
-
-
-╭─「 Maker Menu 」
-│ • ${prefix}girlneko teks | teks2
-│ • ${prefix}sadboy teks | teks2
-│ • ${prefix}lolimaker teks
-│ • ${prefix}rem teks
-│ • ${prefix}gura teks
-│ • ${prefix}kaneki teks
-╰───
-
-╭─「 Cecan Menu 」
-│ • ${prefix}vietnam
-│ • ${prefix}malaysia
-│ • ${prefix}korea
-│ • ${prefix}indonesia
-│ • ${prefix}japan
-│ • ${prefix}thailand
-│ • ${prefix}china
-╰────
-
-
-╭─「 Nsfw 」
-│ • ${prefix}awoo
-│ • ${prefix}blowjob
-│ • ${prefix}hentai
-│ • ${prefix}megumin
-│ • ${prefix}neko
-│ • ${prefix}trapnime
-│ • ${prefix}loli
-│ • ${prefix}husbu
-│ • ${prefix}milf
-│ • ${prefix}cosplay
-╰────
-
-
-╭─「 Group Menu 」
-│ • ${prefix}nsfw
-│ • ${prefix}group open / close
-│ • ${prefix}antilink on / off
-│ • ${prefix}antiwame on / off
-│ • ${prefix}welcome on / off
-│ • ${prefix}linkgc
-│ • ${prefix}add
-│ • ${prefix}kick
-│ • ${prefix}creategroup
-│ • ${prefix}sticktag
-│ • ${prefix}promote
-│ • ${prefix}demote
-│ • ${prefix}promoteall
-│ • ${prefix}demoteall
-│ • ${prefix}revoke
-│ • ${prefix}leave
-╰────
-
-╭─「 Searching Menu 」
-│ • ${prefix}ssweb
-╰────
-
-
-╭─「 Owner Menu 」
-│ • ${prefix}setmenu
-│ • ${prefix}setallmenu
-│ • ${prefix}setprefix multi / nopref
-│ • ${prefix}hidetag
-│ • ${prefix}mode
-│ • ${prefix}bc
-│ • ${prefix}setbio
-│ • ${prefix}setname
-│ • ${prefix}self
-│ • ${prefix}public
-╰────
-
-
-╭─「 Sticker Menu 」
-│ • ${prefix}take
-│ • ${prefix}swm
-│ • ${prefix}sticker [ Reply ]
-│ • ${prefix}toimg
-│ • ${prefix}attp
-╰────`
-              helga.sendMessage(from, {
-"contentText": menu,
-"footerText": `${NamaBot}`,
-"headerType": "DOCUMENT",
-"buttons": [
-{buttonId: `${prefix}owner`, buttonText: {displayText: 'OWNER'}, type: 1},
-{buttonId: `${prefix}allmenu`, buttonText: {displayText: 'MENU'}, type: 1},
-], 
-"documentMessage": {
-"url": "https://mmg.whatsapp.net/d/f/Ao-k40Q-gO_hn2Sqy4nHfrYAYVeWq-7FZNjAqSMngeXI.enc",
-"mimetype": "application/pdf",
-"jpegThumbnail": await getBuffer("https://i.ibb.co/WPTjhrF/kaneki-tokyo-ghoul-4k.jpg"),
-"fileSha256": "kXrt+8eqBgD3MAaYx15D+0Mjbi7yiiv9gIBMu9tXtpE=",
-"fileLength": "99999999999999999999999999999999999999999",
-"pageCount": 2022,
-"mediaKey": "3n1n1Kbt6aNkBAVg8GMetpwXOQusBR97m/gdkX/DbG0=",
-"fileName": `${NamaBot}`,
-"fileEncSha256": "bx/mFEB8SWYMsYMtnlnbbA1B2pJ18rKZqeL7byF+X/A="
-}}, MessageType.buttonsMessage, { "contextInfo": { mentionedJid: [sender],
-externalAdReply: {
-title: `By ${NamaOwner}`,
-body: `jangan bully saya bang:v`,
-mediaType: 'VIDEO',
-mediaType: 2,
-"jpegThumbnail": fs.readFileSync('./helga.jpg'),
-mediaUrl: 'https://youtu.be/mu7mNFs4LnY'
-}}, quoted: mek })
-            break
             case 'pornhub':
             case 'blackpink':
             case 'halloween':
@@ -1819,7 +1613,7 @@ mediaUrl: 'https://youtu.be/mu7mNFs4LnY'
             case 'wolf_g':
             if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
             reply (mess.wait)
-                    if (args.length == 0) return reply(`Example: ${prefix + command} Vip Bot`)
+                    if (args.length == 0) return reply(`Example: ${prefix + command} Kilers Botz`)
                     txt1 = args[0]
                     txt2 = args[1]
                  buff = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${command}?text=${txt1}&text2=${txt2}&apikey=Alphabot`)
@@ -1848,6 +1642,43 @@ reply(mess.wait)
 bo = args.join(" ")
 bf = await getBuffer(`https://ziy.herokuapp.com/api/${command}?nama=${bo}&apikey=xZiyy`)
 helga.sendMessage(from, bf, image, { quoted: mek, caption: 'NIH' })
+break
+case 'asupan':
+po1 = helga.prepareMessageFromContent(from, {
+  "listMessage":{
+"title": "*Asupan nya Kack :v*",
+"description": `\nPilih salah satu asupan di bawah ini..`,
+"buttonText": "Click Here!",
+"listType": "SINGLE_SELECT",
+"sections": [
+  {
+  "title": "Asupan",
+      "rows" :[
+        {
+          "title": "rikagusriani",
+          "rowId": ""
+        },
+        { 
+          "title": "santuy",
+          "rowId": ""
+        },
+        {
+          "title": "ukhty",
+          "rowId": ""
+        },
+        {
+          "title": "gheayubi",
+          "rowId": ""
+        },
+        {
+          "title": "bocil",
+          "rowId": ""
+        }
+        ]
+  }
+  ]
+}}, {quoted : mek}) 
+helga.relayWAMessage(po1, {waitForAck: true})
 break
 case 'girlneko':
 case 'sadboy':
@@ -1912,6 +1743,14 @@ helga.sendMessage(from, sendBtnVeryy, MessageType.buttonsMessage, {quoted:ftrol,
 	         console.log(color('[Verify]'), color(time, 'yellow'), 'Serial:', color(serialUser, 'Red'), 'in', color(sender || groupName))
 	    // console.log(e)
         break
+        case 'delete': // MR.CYSER
+               try {
+               if (helga.message.extendedTextMessage === undefined || helga.message.extendedTextMessage === null) return reply('Reply chat bot')
+               helga.deleteMessage(from, {id: helga.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true})
+               } catch (e){
+               reply('Reply chat bot')
+}
+               break
         
         
     //── 「 Nsfw 」 ──//        
@@ -1944,6 +1783,18 @@ anu = await fetchJson(`https://waifu.pics/api/sfw/megumin`)
 buffer = await getBuffer(anu.url)
 helga.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./helga.jpg')})
 break
+case 'pinterest':
+            if(!q) return reply('gambar apa?')
+            let pin = await hx.pinterest(q)
+            let ac = pin[Math.floor(Math.random() * pin.length)]
+            buff = await getBuffer(ac)
+           buttons = [{buttonId: `!allmenu`,buttonText:{displayText: `Menu`},type:1}]
+              imageMsg = (await helga.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+              buttonsMessage = {footerText:'KilersBotz', imageMessage: imageMsg,
+              contentText:`Jangan Lupa Sewabotnya juga ya :v`,buttons,headerType:4}
+              prep = await helga.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              helga.relayWAMessage(prep)
+              break
 case  'neko':
 if (!isNsfw) return reply(`Fitur Nsfw Belum Aktif Di Grup Ini\nKetik: ${prefix}nsfw 1 \nUntuk Mengaktifkan`)
 reply(mess.wait)
@@ -1977,6 +1828,11 @@ case 'nsfw':
 						reply('1 untuk mengaktifkan, 0 untuk mematikan')
 					}
 					break
+					case 'tes':
+						const loli = fs.readFileSync('./audio/ohayo.mp3')
+
+        helga.sendMessage(from, loli, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+        break
 case 'loli':
        case 'husbu':
        case 'milf':
@@ -1994,6 +1850,7 @@ case 'loli':
               helga.relayWAMessage(prep)
               fs.unlinkSync(`./${sender}.jpeg`)
               break
+            
               
         //── 「 Owner Menu 」 ──//          
               
@@ -2010,7 +1867,7 @@ anu =`Silahkan pilih salah satu di bawah`
  buttons = [{buttonId: 'setmenu ori', buttonText: {displayText: 'ORI'}, type: 1},{buttonId: 'setmenu simpel', buttonText: {displayText: 'SIMPEL'}, type: 1}]
 const skuygelud = {
     contentText: `${anu}`,
-    footerText: '*©${NamaBot}*',
+    footerText: '*©KilersBotz*',
     buttons: buttons,
     headerType: 1
 }
@@ -2030,13 +1887,18 @@ anu =`Silahkan pilih salah satu di bawah`
  buttons = [{buttonId: 'setallmenu ori', buttonText: {displayText: 'ORI'}, type: 1},{buttonId: 'setallmenu simpel', buttonText: {displayText: 'SIMPEL'}, type: 1}]
 const skuygf = {
     contentText: `${anu}`,
-    footerText: '*${NamaBot}*',
+    footerText: '*KilersBotz*',
     buttons: buttons,
     headerType: 1
 }
 await helga.sendMessage(from, skuygf, MessageType.buttonsMessage, {quoted: ftrol})
 }
 break
+case 'wasted':
+                    ini_url = args[0]
+                    ini_buffer = await getBuffer(`https://api-alphabot.herokuapp.com/api/image_editor/wanted?apikey=Alphabot&url=${ini_url}`)
+                    await helga.sendMessage(from, ini_buffer, image, { quoted: mek })
+                    break
 //Sampai sini
 case 'jadi':
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
@@ -2044,61 +1906,67 @@ menu = `Enak aja lu mau numpang sewa lah :v`
 katalog(menu)
 sendButLocation(from, `Hai ${pushname} ☺️`, "*_© 𝚅2.ೃ࿐_*", {jpegThumbnail:ofrply}, [{buttonId:`${prefix}sewa`,buttonText:{displayText:'SEWA 🎟️'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 break
+case 'infoall': case 'tagall':
+if(!q) return reply('Ingfonya apa?')
+if (!isGroup) return reply(mess.only.group)
+var nom = helga.participant
+members_id = []
+	teks = '\n'
+	for (let mem of groupMembers) {
+	teks += `┃  *@${mem.jid.split('@')[0]}*\n`
+	members_id.push(mem.jid)
+	}
+mentions(`┏━━⬣ 𝙄𝙉𝙁𝙊 \n┃\n┃ *From : @${sender.split("@")[0]}*\n┃ *Info :  ${q}*\n┃ *Total Member : ${groupMembers.length}*\n┃ *Nama Group : ${groupName}*\n┃\n┗⬣\n\n┏━━⬣ 𝙏𝘼𝙂 𝘼𝙇𝙇\n┃`+teks+'┃\n┗⬣', members_id, false)
+break
 case 'command':
 case 'p':
- listMsg = {
- buttonText: 'LIST MENU',
- footerText: '',
- description: `Hai kak ${pushname}`,
- sections: [
-                     {
-                      "title": `LIST MENU`,
- rows: [
-                          {
-                              "title": "MAKER",
-                              "rowId": "#makermenu"
-                           },
-                           {
-                              "title": "OWNER MENU",
-                              "rowId": ".ownermenu"
-                           },
-                           {
-                              "title": "INFORMATION MENU",
-                              "rowId": ".infomenu"
-                           },
-                           {
-                              "title": "NSFW MENU",
-                              "rowId": ".nsfwmenu"
-                           },
-                           {
-                              "title": "STICKER MENU",
-                              "rowId": ".stickermenu"
-                           },
-                           {
-                              "title": "TEXTPRO MENU",
-                              "rowId": ".textpromenu"
-                           },
-                           {
-                              "title": "OWNER MENU",
-                              "rowId": ".ownermenu"
-                           },
-                           {
-                              "title": "GRUP MENU",
-                              "rowId": ".grupmenu"
-                           },
-                           {
-                              "title": "CECAN MENU",
-                              "rowId": ".cecanmenu"
-                           },
-                           {
-                              "title": "DOWNLOAD MENU",
-                              "rowId": ".downloadmenu"
-                           },
-                        ]
-                     }],
- listType: 1
-}
-helga.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [command]},quoted:mek})
+ po1 = helga.prepareMessageFromContent(from, {
+  "listMessage":{
+"title": "*List Menunya*",
+"description": `Hai ${pushname} ${tampilUcapan}`,
+"buttonText": "Click Here!",
+"listType": "SINGLE_SELECT",
+"sections": [
+  {
+  "title": "List Menu",
+      "rows" :[
+        {
+          "title": "DownloadMenu",
+          "rowId": ""
+        },
+        { 
+          "title": "InfomationMenu",
+          "rowId": ""
+        },
+        {
+          "title": "TextproMenu",
+          "rowId": ""
+        },
+        {
+          "title": "MakerMenu",
+          "rowId": ""
+        },
+        {
+          "title": "GrubMenu",
+          "rowId": ""
+        },
+        {
+          "title": "SearchingMenu",
+          "rowId": ""
+        },
+        {
+          "title": "OwnerMenu",
+          "rowId": ""
+        },
+        {
+          "title": "StickerMenu",
+          "rowId": ""
+        },
+        ]
+  }
+  ]
+}}, {quoted : mek}) 
+helga.relayWAMessage(po1, {waitForAck: true})
 break
 case 'stopjadibot':
 if (!isOwner && !mek.key.fromMe) return reply(mess.only.ownerB)
@@ -2170,7 +2038,7 @@ sendMediaURL(from,`${res.result.link}`,`${res.result.desc}`)
 const buttons = [{buttonId: 'antideletee on', buttonText: {displayText: 'ON✔️'}, type: 1},{buttonId: 'antideletee off', buttonText: {displayText: 'OFF✖️'}, type: 1}]
 const buttonMessage = {
     contentText: `${anu}`,
-    footerText: '*${NamaBot}*',
+    footerText: '*KilersBotz*',
     buttons: buttons,
     headerType: 1
 }
@@ -2199,6 +2067,18 @@ await helga.sendMessage(from, buttonMessage, MessageType.buttonsMessage, {quoted
 `
              helga.sendMessage(from, ini_buffer, image, { caption: ini_txt, thumbnail: Buffer.alloc(0) })
              break
+             case 'quotes':
+                    teks = await fetchJson(`https://api.zekais.com/quotes?apikey=zekais`)
+                    quotes = teks.quotes
+                    reply(`_${quotes}_\n\n*KilerBotz*`)
+                    break
+             case 'tahlil':
+                    teks = await fetchJson(`https://api.zekais.com/tahlil?apikey=zekais`)
+                    title = teks.title
+                    arab = teks.arabic
+                    trans = teks.translate
+                    reply(`_${title}_\n\n*Arab : ${arab}*\n\n*Translate : ${trans}*`)
+                    break
                 case 'setprefix':
       if (!isOwner && !mek.key.fromMe) return reply(mess.only.ownerB)
       if (args.length < 1) return reply(`Contoh ${prefix + command} multi/nopref`)
@@ -2238,6 +2118,18 @@ break
 			publik = true
 				reply('Sukses mengubah mode self ke public')
 			break
+			case 'giveaway':
+		    case 'way':
+              if (!isGroup) return reply(mess.only.group)
+              membr = []
+              const nge = groupMembers
+              const tod = groupMembers
+              const beb = nge[Math.floor(Math.random() * nge.length)]
+              const an = pushname[Math.floor(Math.random() * tod.length)]
+              teks = `*Yang Menang Giveaway Adalah :* @${beb.jid.split('@')[0]}\n\nSelamat Yaaa😇`
+              membr.push(beb.jid)
+              mentions(teks, membr, true)
+              break
 			case 'self':
 			if (!isOwner && !mek.key.fromMe) return reply(mess.only.ownerB)
 				publik = false
@@ -2265,7 +2157,7 @@ break
 punten = [{buttonId: 'antiwame off', buttonText: {displayText: 'OFF✖️'}, type: 1},{buttonId: 'antiwame on', buttonText: {displayText: 'ON✔️'}, type: 1}]
 const btnasu = {
     contentText: `${anu}`,
-    footerText: '*_${NamaBot}*',
+    footerText: '*KilersBotz*',
     buttons: punten,
     headerType: 1
 }
@@ -2294,7 +2186,7 @@ await helga.sendMessage(from, btnasu, MessageType.buttonsMessage, {quoted: ftrol
 punten = [{buttonId: 'antilink off', buttonText: {displayText: 'OFF✖️'}, type: 1},{buttonId: 'antilink on', buttonText: {displayText: 'ON✔️'}, type: 1}]
 const btnasu = {
     contentText: `${anu}`,
-    footerText: '*${NamaBot}*',
+    footerText: '*KilersBotz*',
     buttons: punten,
     headerType: 1
 }
@@ -2342,6 +2234,41 @@ await helga.sendMessage(from, btnasu, MessageType.buttonsMessage, {quoted: ftrol
          helga.query({json, expect200: true})
           reply('Sukses Mereset Link Group')
          break
+         case 'f':
+case 'lock':
+ ikymemek = {
+  "key": {
+    "fromMe": false,
+    participant: `6287701656619@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+  },
+  "message": {
+    "viewOnceMessage": {
+      "message": {
+        "imageMessage": {
+          "url": "https://mmg.whatsapp.net/d/f/AjD3dQIM5hW3UkDfnnkice-eMcsMJJALEcgD9HnDGZEp.enc",
+          "mimetype": "image/jpeg",
+          "fileSha256": "aR3vWUsV9VZUiR+agYok8oM4UHiuhqEShMpQ6SgY9WM=",
+          "fileLength": "675",
+          "height": 41,
+          "width": 52,
+          "mediaKey": "6RDG8T+jOb0RfleWzLTclsaVn0EGRA/v78dnS+Y4S+o=",
+          "fileEncSha256": "idNxqNtCaHRxuN+AX0uakPrBuiyvx84IksPUYMYgs7Y=",
+          "directPath": "/v/t62.7118-24/13810909_985978368802545_7608967834334288292_n.enc?ccb=11-4&oh=359274a24041d97e91597ad1fb40e784&oe=61595B99",
+          "mediaKeyTimestamp": "1630826390",
+          "jpegThumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIACkANAMBIgACEQEDEQH/xAAnAAEBAAAAAAAAAAAAAAAAAAAABgEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAApgAAAAAAAAAAAf/EABQQAQAAAAAAAAAAAAAAAAAAAFD/2gAIAQEAAT8AK//EABQRAQAAAAAAAAAAAAAAAAAAADD/2gAIAQIBAT8AT//EABQRAQAAAAAAAAAAAAAAAAAAADD/2gAIAQMBAT8AT//Z",
+          "viewOnce": true
+        }
+      }
+    }
+  },
+  "messageTimestamp": "1630826389",
+  "status": "SERVER_ACK",
+  "mediaData": {
+    "localPath": "/data/user/0/com.gbwhatsapp/files/ViewOnce/IMG-20210905-WA0047.jpg"
+  }
+}
+helga.sendMessage(from, { "degreesLatitude": '', "degreesLongitude": '', "jpegThumbnail": ofrply}, MessageType.location, {quoted: mek})
+           break
 case 'gc': case 'group':
 buttonss = [{buttonId: `opengc`, buttonText: {displayText: 'OPEN'}, type: 1},{buttonId: `closegc`, buttonText: {displayText: 'CLOSE'}, type: 1}]
 const bMess = {
@@ -2366,6 +2293,19 @@ break
 						reply(`Sukses menutup grup ${groupName}`)
 						helga.groupSettingChange(from, GroupSettingChange.messageSend, true)
 					break
+					case 'donate': 
+       case 'donasi':
+       buff = `https://www.photobox.co.uk/my/photo/full?photo_id=504503932133`
+            teksnya = `
+DONASI OM\n*SESUNGGUH NYA ORANG YANG MEMBERI LEBIH BAIK DARI MENERIMA ☝\n\n️Dana : 6287701656619\nOVO : 6287701656619\nPulsa : 6287701656619* 
+`
+  buttons = [{buttonId: `${prefix}owner`,buttonText:{displayText: `Owner👑`},type:1}]
+              imageMsg = (await helga.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+              buttonsMessage = {footerText:'Ikhlas', imageMessage: imageMsg,
+              contentText: teksnya,buttons,headerType:4}
+              prep = await helga.prepareMessageFromContent(from,{buttonsMessage},{quoted: mek})
+              helga.relayWAMessage(prep)
+              break
 				case 'demoteall':
 		if (!isOwner && !mek.key.fromMe) return reply(mess.only.ownerB)
 		if (!isGroup) return reply(mess.only.group)
@@ -2424,7 +2364,7 @@ break
 buttons = [{buttonId: `menu`, buttonText: {displayText: 'MENU'}, type: 1},{buttonId: `sewa`, buttonText: {displayText: 'SEWA BOT'}, type: 1}]
 const btnbc = {
     contentText: `${body.slice(4)}`,
-    footerText: '*${NamaBot}*',
+    footerText: '*KilersBotz*',
     buttons: buttons,
     headerType: 1
 }
@@ -2439,7 +2379,7 @@ await helga.sendMessage(_.jid, btnbc, MessageType.buttonsMessage, {quoted: ftrol
 				case 'ttp':  
 				case 'attp':
               if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
-					if (!c) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp ${NamaBot}`)
+					if (!c) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp KilersBotz`)
 					atetepe = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(c)}`)
 					helga.sendMessage(from, atetepe, sticker, { quoted: mek })
 					break             
@@ -2459,48 +2399,36 @@ await helga.sendMessage(_.jid, btnbc, MessageType.buttonsMessage, {quoted: ftrol
             }
             helga.sendMessage(from, optionshidetag, text)
             break
+            case 'penangkal1':
+            reply('*PENANGKAL OM :)*\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+            break
+            case 'penangkal2':
+            reply('*PENANGKALNYA OM*\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n')
+                break
                 case 'ytmp3':
-            if (args.length < 1) return reply('Link Nya Mana ?')
-            if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-            teks = args.join(' ')
-            reply(mess.wait)
-            res = await y2mateA(teks).catch(e => {
-            reply('_[ ! ] Error Gagal Dalam Memasuki Web Y2mate_')
-})
-            result = `*YOUTUBE MP3 🎵*
-
-*Data Berhasil Didapatkan !!*
-⌖ _Title : ${res[0].judul}_
-⌖ _Ext : MP3_
-⌖ _Size : ${res[0].size}_
-
-\`\`\`Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit\`\`\``
-
-            sendFileFromUrl(res[0].thumb, image, {caption: result, quoted: mek}).then((lalu) => {
-            sendFileFromUrl(res[0].link, document, {quoted: mek, mimetype: 'audio/mp3', filename: res[0].output})
-})
-            break
+if (!q)return reply(`Example : ${prefix + command} [Link]`)
+ppec = await fetchJson(`https://api.zekais.com/ytmp3?url=${q}&apikey=zekais`)
+ytt = `「 *YOUTUBE MP3* 」\n\n▢ *Judul :* ${ppec.title}\n▢ *Size : ${ppec.size}*\n▢ *Ext: Mp3*\n▢ *Like : ${ppec.likes}*\n▢ *Dislike : ${ppec.dislike}*\n▢ *Views : ${ppec.views}*\n▢ *Upload : ${ppec.uploadDate}*\n\n*[ Wait ]Tunggu Sebentar kak...*`
+buff = await getBuffer(ppec.thumb)
+reply(mess.wait)
+helga.sendMessage(from, buff, image, {quoted: mek, caption: ytt})
+sendMediaURL(from,ppec.result)
+break 
 case 'ytmp4':
-            if (args.length < 1) return reply('Link Nya Mana?')
-            if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-            teks = args.join(' ')
-            reply(mess.wait)
-            res = await y2mateV(teks).catch(e => {
-            reply('_[ ! ] Error Gagal Memasuki Web Y2mate_')
-})
-            result = `*YOUTUBE MP4 🎥*
+if (!q)return reply(`Example : ${prefix + command} [Link]`)
 
-*Data Berhasil Didapatkan !!*
-⌖ _Title : ${res[0].judul}_
-⌖ _Ext : MP4_
-⌖ _Size : ${res[0].size}_
+mp4 = await fetchJson(`https://api.zekais.com/ytmp4?url=${q}&apikey=zekais`)
 
-\`\`\`Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit\`\`\``
+ytt3 = `「 *YOUTUBE MP4* 」\n\n▢ *Judul :* ${mp4.title}\n▢ *Size : ${mp4.size}*\n▢ *Ext: Mp4*\n▢ *Quality : ${mp4.quality}*\n▢ *Like : ${mp4.likes}*\n▢ *Dislike : ${mp4.dislike}*\n▢ *Views : ${mp4.views}*\n▢ *Upload : ${mp4.uploadDate}*\n\n*[ Wait ]Tunggu Sebentar kak...*`
 
-            sendFileFromUrl(res[0].thumb, image, {caption: result, quoted: mek}).then((lalu) => {
-            sendFileFromUrl(res[0].link, video, {quoted: mek, mimetype: 'video/mp4', filename: res[0].output})
-})
-            break
+buff = await getBuffer(mp4.thumb)
+
+reply(mess.wait)
+
+helga.sendMessage(from, buff, image, {quoted: mek, caption: ytt3})
+sendMediaURL(from,mp4.result,`「 *YOUTUBE MP4* 」\n▢ *Judul :* ${mp4.title}\n▢ *Size : ${mp4.size}*\n▢ *Ext: Mp4*\n▢ *Quality : ${mp4.quality}*`)
+
+break
             case 'exif':
                     if (!isOwner && !mek.key.fromMe) return reply(mess.only.ownerB)
 					const exifff = `${args.join(' ')}`
@@ -2509,6 +2437,11 @@ case 'ytmp4':
 					exif.create(namaPack, authorPack)
 					await reply('Done gan')
 				break
+				case 'script':
+		case 'sc':
+		case 'sourcecode':
+		helga.sendMessage(from, { text: "https://github.com/KilersBotz/PUBLIC-BOT\n\nhttps://github.com/KilersBotz/PUBLIC-BOT", matchedText: 'https://github.com/KilersBotz/PUBLIC-BOT', description: "", title: "don't click here !!!", jpegThumbnail: ofrply }, 'extendedTextMessage', { detectLinks: false, contextInfo: { forwardingScore: 508, isForwarded: true}, quoted: mek})
+		break
 				case 'sticker':
 					case 'stiker':
 					case 's':
@@ -2658,11 +2591,23 @@ case 'ytmp4':
 						break
 			case 'speed':
 			case 'ping':
-              if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: mek})
-					const timestampi = speed();
-					const latensyi = speed() - timestampi
-					reply(`Speed: ${latensyi.toFixed(4)} Second`)
-					break
+var groups = helga.chats.array.filter(v => v.jid.endsWith('g.us'))
+var private = helga.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
+const chatsIds = await helga.chats.all()
+const timestamp = speed();
+const latensi = speed() - timestamp 
+p0 =` Loaded Message
+                
+- [ ${totalchat.length} ]  Total Chat
+- [ ${groups.length} ] Group Chat
+- [ ${private.length} ] Private Chat
+- [ ${helga.user.phone.device_manufacturer} ] HANDPHONE
+- [ ${helga.user.phone.wa_version} ] WA Version
+- [ Baileys ] Libary
+
+Speed : ${latensi.toFixed(4)} Second`
+reply(p0)
+break
 				case 'return':
 				if (!isOwner) return reply(mess.only.ownerB)
 					return helga.sendMessage(from, JSON.stringify(eval(body.slice(8))), text, {quoted: mek})
@@ -2784,7 +2729,7 @@ case 'ytmp4':
 punten = [{buttonId: 'welcome off', buttonText: {displayText: 'OFF✖️'}, type: 1},{buttonId: 'welcome on', buttonText: {displayText: 'ON✔️'}, type: 1}]
 const btngrass = {
     contentText: `${anu}`,
-    footerText: '*${NamaBot}*',
+    footerText: '*KilersBotz*',
     buttons: punten,
     headerType: 1
 }
