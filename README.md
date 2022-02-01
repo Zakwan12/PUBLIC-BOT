@@ -41,11 +41,10 @@
 ```bash
 termux-setup-storage
 pkg install nodejs
+pkg install mc 
+pkg install git
+pkg install ffmpeg
 cd /sdcard
 cd PUBLIC-BOT
 node main
 ```
-
-## ```Deploy```
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/KilersBotz/PUBLIC-BOT)
